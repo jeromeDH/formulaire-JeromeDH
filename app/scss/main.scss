@@ -1,0 +1,101 @@
+@import "custom";
+@import "bootstrap";
+@import "validetta";
+
+body{
+	
+}
+
+h1{
+	text-align: center;
+	padding: 20px;
+	color: rgba(52,105,207,1);
+}
+
+form{
+	background: linear-gradient(rgba(52,151,207,1) 0%, rgba(52,105,207,1) 100%);
+	border: solid #1819c7 3px;
+	border-radius: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+h2{
+	margin-bottom: 20px;
+	text-align: center;
+	color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    transition: background-color 5000s ease-in-out 0s;
+	-webkit-text-fill-color: white !important;
+}
+
+input{
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid white;
+	background:rgba(0,0,0,0);
+}
+
+input:focus{
+	outline: none !important;
+	color: white;
+}
+
+::placeholder{
+	color: white;
+}
+
+p{
+	color: white;
+}
+
+#datepicker{
+	width: calc(100% - 36px);
+	color: white;
+}
+
+#email{
+	color: white !important;
+}
+
+button{
+	background-color: white;
+	border-radius: 5px;
+	border: solid white;
+}
+
+.adresse{
+	margin: 30px 0;
+}
+
+//Datepicker
+.ui-datepicker-trigger{
+	margin-left: 20px;
+}
+
+.ui-datepicker-header{
+	background-color: rgba(52,151,207,1);
+}
+//Fin datepicker
+
+
+//Validetta
+.validetta-valid input{
+	background-image: url("https://macbank.r.worldssl.net/test2/wp-content/uploads/2018/09/sign-check-icon.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 20px;
+	color: white;
+}
+
+.validetta-bubble{
+	width: 100px;
+	font-size: 14px !important;
+	line-height: 16px;
+}
+//Fin validetta

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulaire Bootstrap</title>
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css">	
+<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Connexion / Inscription</h1>	
+	
+	<div class="container">
+	<div class="row">
+	<div class="col-md-6">
+		<form id="inscription" enctype="multipart/form-data" class="form">
+
+		<h2>Inscription</h2>
+
+		<p><input id="nom" name="nom" type="text" placeholder="Nom" data-validetta="required"></p>
+
+		<p><input id="prenom" name="prenom" type="text" placeholder="Prenom" data-validetta="required"></p>
+
+		<p><input type="text" id="datepicker" placeholder="Date de naissance"></p>
+
+
+		<div>
+			<p><input id="email" placeholder="Email" data-validetta="required,email"></p>
+		</div>
+
+		<!--<hr>
+
+		<div class="ui-widget">
+		  <label for="tags">Tags: </label>
+		  <input id="tags">
+		</div>-->
+
+		<div class="adresse">
+			<p>Adresse: </p>
+			<p><input id="cp" placeholder="Code Postal" data-validetta="minLength[4]"></p>
+			<p><input id="ville" placeholder="Ville"></p>
+		</div>
+
+		<br>
+
+		<div>
+		<p><input id="mdp" type="password" name="mdp" placeholder="Mot de passe" data-validetta="required,minLength[6]"></p>
+
+		<p><input id="mdp2" type="password" name="mdp2" placeholder="Confirmez votre mot de passe" data-validetta="required,equalTo[mdp]"></p>
+		</div>
+
+		<br>
+
+		<div>
+			<select multiple data-validetta="minSelected[2]" class="custom-select">
+
+				<option>Conditions 1</option>
+				<option>Conditions 2</option>
+
+			</select>
+		</div>
+		<br>
+		<button type="submit">Valider</button>
+		</form>
+	</div><!--col-sm-->
+	<div class="col-md-6">
+		<form id="connexion" enctype="multipart/form-data" class="form">
+			
+			<h2>Connexion</h2>
+			
+			<div>
+				<p><input id="email-co" placeholder="Email" data-validetta="required,email"></p>
+			</div>
+
+			<p><input id="mdp-co" name="mdp" placeholder="Mot de passe" data-validetta="required,minLength[6]"></p>
+
+			<button type="submit">Valider</button>
+
+		</form>
+	</div><!--col-sm-->
+	</div><!--row-->
+	</div><!--container-->
+	
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/validetta.min.js"></script>
+<script src="js/validettaLang-fr-FR.js"></script>
+<script src="js/script.js"></script>		
+</body>
+</html>
