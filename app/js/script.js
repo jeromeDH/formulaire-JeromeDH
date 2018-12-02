@@ -25,7 +25,10 @@ jQuery(function($){
 		showOn: "button",
 		buttonImage: "../css/images/calendar.gif",
 		buttonImageOnly: true,
-		buttonText: "Select date"
+		buttonText: "Select date",
+		changeYear: true,
+		minDate: new Date("-100y"),
+		yearRange: "c-100:c"
 		};
 	$.datepicker.setDefaults($.datepicker.regional['fr']);
 });
@@ -72,22 +75,6 @@ $(function(){
           }) );
       	}
 	});//Autocomplete
-	
-	$( "#datepicker" ).datepicker({
-	  yearRange: "-nn:+nn"
-	});
-	
-	// Getter
-	var yearRange = $( "#datepicker" ).datepicker( "option", "yearRange" );
-
-	// Setter
-	$( "#datepicker" ).datepicker( "option", "yearRange", "-nn:+nn" );
-
-	// Getter
-	var changeYear = $( "#datepicker" ).datepicker( "option", "changeYear" );
-
-	// Setter
-	$( "#datepicker" ).datepicker( "option", "changeYear", true );
 	
 	$.ajax({
 		
@@ -147,10 +134,10 @@ $(function(){
 
 		   //alert( 'Nice, Form is valid.' );
 
-			 var donnees = $("#form").serialize();	  
+			 var donnees = $(".form").serialize();	  
 			 $.ajax({
 				 // 1) on définit le fichier vers lequel on envoie la requête POST
-				   url : 'php.php',
+				   url : 'envoi.php',
 
 				// 2/ on spécifie la méthode  
 				   type : 'POST', // Le type de la requête HTTP, ici  POST
@@ -164,7 +151,8 @@ $(function(){
 				   // 5) fonction à effectuer en cas de succès
 				   success : function(data){ //  contient le HTML renvoyé
 
-
+					console.log("envoi réussi");
+					   
 					$('#contenu').html(data);  
 
 
